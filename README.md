@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# XUpload - TikTok Developer App Landing Page
 
-## Getting Started
+This is a minimal, production-ready landing page for the **XUpload** TikTok developer application. It is built with Next.js, Tailwind CSS, and TypeScript.
 
-First, run the development server:
+## Project Structure
+
+- `app/page.tsx`: The main landing page.
+- `app/privacy/page.tsx`: The Privacy Policy page.
+- `app/terms/page.tsx`: The Terms of Service page.
+- `app/components/`: Reusable components (Header, Footer, Logo).
+- `app/globals.css`: Tailwind configuration and global styles.
+
+## Setup & Deployment
+
+### 1. Run Locally
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Deploy to Vercel
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The easiest way to deploy is to use [Vercel](https://vercel.com/new).
 
-## Learn More
+1.  Push your code to a Git repository (GitHub, GitLab, Bitbucket).
+2.  Import the project into Vercel.
+3.  Vercel will detect Next.js and deploy automatically.
 
-To learn more about Next.js, take a look at the following resources:
+## Configuration for TikTok Developer Portal
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+When registering your app in the TikTok for Developers portal, use the following URL paths (replace `https://your-domain.com` with your actual Vercel deployment URL):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Home Page URL:** `https://your-domain.com/`
+- **Privacy Policy URL:** `https://your-domain.com/privacy`
+- **Terms of Service URL:** `https://your-domain.com/terms`
 
-## Deploy on Vercel
+## Customization
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Changing the Contact Email
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open the following files and search for `contact@example.com` to replace it with your actual support email:
+
+- `app/page.tsx`
+- `app/privacy/page.tsx`
+- `app/terms/page.tsx`
+
+### Replacing the Logo
+
+The current logo is a simple SVG component located at `app/components/Logo.tsx`.
+
+To replace it:
+1.  Open `app/components/Logo.tsx`.
+2.  Replace the `<svg>...</svg>` content with your own SVG code.
+3.  Ensure you keep the `className` prop passed to your new SVG to maintain responsive sizing and coloring.
